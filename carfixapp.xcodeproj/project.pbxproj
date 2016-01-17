@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		186375F319C32FBDDC3BFEB2 /* Pods_carfixapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272B523883623C1FBC37DA50 /* Pods_carfixapp.framework */; };
+		40418F021C4C035F00230CA7 /* header.m in Sources */ = {isa = PBXBuildFile; fileRef = 40418F011C4C035F00230CA7 /* header.m */; };
 		40E3E2301C4BF17D00A70BA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E3E22F1C4BF17D00A70BA0 /* AppDelegate.swift */; };
 		40E3E2391C4BF17D00A70BA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E3E2371C4BF17D00A70BA0 /* Main.storyboard */; };
 		40E3E23B1C4BF17D00A70BA0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40E3E23A1C4BF17D00A70BA0 /* Images.xcassets */; };
@@ -39,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		272B523883623C1FBC37DA50 /* Pods_carfixapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_carfixapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40418F001C4C035F00230CA7 /* carfixapp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "carfixapp-Bridging-Header.h"; sourceTree = "<group>"; };
+		40418F011C4C035F00230CA7 /* header.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = header.m; sourceTree = "<group>"; };
 		40E3E22C1C4BF17D00A70BA0 /* carfixapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carfixapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E3E22F1C4BF17D00A70BA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40E3E2381C4BF17D00A70BA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -97,6 +100,7 @@
 		40E3E2231C4BF17D00A70BA0 = {
 			isa = PBXGroup;
 			children = (
+				40418F011C4C035F00230CA7 /* header.m */,
 				40E3E26C1C4BF3CA00A70BA0 /* Supporting Files */,
 				40E3E26B1C4BF32C00A70BA0 /* Views */,
 				40E3E2661C4BF2CD00A70BA0 /* Model */,
@@ -108,6 +112,7 @@
 				40E3E22D1C4BF17D00A70BA0 /* Products */,
 				1A0505FD4811D03FA71B14BE /* Pods */,
 				F02D85A75C552DAEE753DE42 /* Frameworks */,
+				40418F001C4C035F00230CA7 /* carfixapp-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -372,6 +377,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40418F021C4C035F00230CA7 /* header.m in Sources */,
 				40E3E2301C4BF17D00A70BA0 /* AppDelegate.swift in Sources */,
 				40E3E2681C4BF2E100A70BA0 /* GoogleDataProvider.swift in Sources */,
 				40E3E26A1C4BF30900A70BA0 /* GooglePlace.swift in Sources */,
@@ -521,10 +527,14 @@
 			baseConfigurationReference = BCEF2A4FF4E4262D178B0B08 /* Pods-carfixapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = carfixapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.carfix.carfixapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "carfixapp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -533,10 +543,13 @@
 			baseConfigurationReference = F7B30079F1B888A1A35416B8 /* Pods-carfixapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = carfixapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.carfix.carfixapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "carfixapp-Bridging-Header.h";
 			};
 			name = Release;
 		};

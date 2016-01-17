@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="upload" translatesAutoresizingMaskIntoConstraints="NO" id="R8C-ma-Lgi">
-                                <rect key="frame" x="175" y="240" width="250" height="119"/>
+                                <rect key="frame" x="185" y="252" width="230" height="96"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

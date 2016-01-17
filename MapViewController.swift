@@ -8,16 +8,23 @@
 
 import Foundation
 import UIKit
+import GoogleMaps
+
 
 class MapViewController: UIViewController {
     
+    @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var mapCenterPinImage: UIImageView!
     @IBOutlet weak var pinImageVerticalConstraint: NSLayoutConstraint!
     var searchedTypes = ["bakery", "bar", "cafe", "grocery_or_supermarket", "restaurant"]
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -35,5 +42,36 @@ extension MapViewController: TypesTableViewControllerDelegate {
     func typesController(controller: TypesTableViewController, didSelectTypes types: [String]) {
         searchedTypes = controller.selectedTypes.sort()
         dismissViewControllerAnimated(true, completion: nil)
+    }
+}
+
+// MARK: - CLLocationManagerDelegate
+//1
+extension MapViewController: CLLocationManagerDelegate {
+    // 2
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        // 3
+        if status == .AuthorizedWhenInUse {
+            
+            // 4
+            locationManager.startUpdatingLocation()
+            
+            //5
+            mapView.myLocationEnabled = true
+            mapView.settings.myLocationButton = true
+        }
+    }
+    
+    // 6
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            
+            // 7
+            mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
+            
+            // 8
+            locationManager.stopUpdatingLocation()
+        }
+        
     }
 }
