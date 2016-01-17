@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		186375F319C32FBDDC3BFEB2 /* Pods_carfixapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272B523883623C1FBC37DA50 /* Pods_carfixapp.framework */; };
 		40E3E2301C4BF17D00A70BA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E3E22F1C4BF17D00A70BA0 /* AppDelegate.swift */; };
-		40E3E2321C4BF17D00A70BA0 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E3E2311C4BF17D00A70BA0 /* RootViewController.swift */; };
-		40E3E2341C4BF17D00A70BA0 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E3E2331C4BF17D00A70BA0 /* DataViewController.swift */; };
-		40E3E2361C4BF17D00A70BA0 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E3E2351C4BF17D00A70BA0 /* ModelController.swift */; };
 		40E3E2391C4BF17D00A70BA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E3E2371C4BF17D00A70BA0 /* Main.storyboard */; };
-		40E3E23B1C4BF17D00A70BA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40E3E23A1C4BF17D00A70BA0 /* Assets.xcassets */; };
+		40E3E23B1C4BF17D00A70BA0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40E3E23A1C4BF17D00A70BA0 /* Images.xcassets */; };
 		40E3E23E1C4BF17D00A70BA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E3E23C1C4BF17D00A70BA0 /* LaunchScreen.storyboard */; };
 		40E3E2491C4BF17E00A70BA0 /* carfixappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E3E2481C4BF17E00A70BA0 /* carfixappTests.swift */; };
 		40E3E2541C4BF17E00A70BA0 /* carfixappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E3E2531C4BF17E00A70BA0 /* carfixappUITests.swift */; };
+		40E3E2631C4BF27300A70BA0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E3E2621C4BF27300A70BA0 /* MapViewController.swift */; };
+		40E3E2651C4BF2B200A70BA0 /* TypesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E3E2641C4BF2B200A70BA0 /* TypesTableViewController.swift */; };
+		40E3E2681C4BF2E100A70BA0 /* GoogleDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E3E2671C4BF2E100A70BA0 /* GoogleDataProvider.swift */; };
+		40E3E26A1C4BF30900A70BA0 /* GooglePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E3E2691C4BF30900A70BA0 /* GooglePlace.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,21 +38,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		272B523883623C1FBC37DA50 /* Pods_carfixapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_carfixapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E3E22C1C4BF17D00A70BA0 /* carfixapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carfixapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E3E22F1C4BF17D00A70BA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		40E3E2311C4BF17D00A70BA0 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		40E3E2331C4BF17D00A70BA0 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
-		40E3E2351C4BF17D00A70BA0 /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
 		40E3E2381C4BF17D00A70BA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		40E3E23A1C4BF17D00A70BA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		40E3E23A1C4BF17D00A70BA0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = carfixapp/Images.xcassets; sourceTree = "<group>"; };
 		40E3E23D1C4BF17D00A70BA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		40E3E23F1C4BF17D00A70BA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40E3E23F1C4BF17D00A70BA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = carfixapp/Info.plist; sourceTree = "<group>"; };
 		40E3E2441C4BF17E00A70BA0 /* carfixappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = carfixappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E3E2481C4BF17E00A70BA0 /* carfixappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carfixappTests.swift; sourceTree = "<group>"; };
 		40E3E24A1C4BF17E00A70BA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40E3E24F1C4BF17E00A70BA0 /* carfixappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = carfixappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E3E2531C4BF17E00A70BA0 /* carfixappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carfixappUITests.swift; sourceTree = "<group>"; };
 		40E3E2551C4BF17E00A70BA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40E3E2621C4BF27300A70BA0 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		40E3E2641C4BF2B200A70BA0 /* TypesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypesTableViewController.swift; sourceTree = "<group>"; };
+		40E3E2671C4BF2E100A70BA0 /* GoogleDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDataProvider.swift; sourceTree = "<group>"; };
+		40E3E2691C4BF30900A70BA0 /* GooglePlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlace.swift; sourceTree = "<group>"; };
+		BCEF2A4FF4E4262D178B0B08 /* Pods-carfixapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carfixapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-carfixapp/Pods-carfixapp.debug.xcconfig"; sourceTree = "<group>"; };
+		F7B30079F1B888A1A35416B8 /* Pods-carfixapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carfixapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-carfixapp/Pods-carfixapp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				186375F319C32FBDDC3BFEB2 /* Pods_carfixapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,13 +85,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A0505FD4811D03FA71B14BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCEF2A4FF4E4262D178B0B08 /* Pods-carfixapp.debug.xcconfig */,
+				F7B30079F1B888A1A35416B8 /* Pods-carfixapp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		40E3E2231C4BF17D00A70BA0 = {
 			isa = PBXGroup;
 			children = (
+				40E3E26C1C4BF3CA00A70BA0 /* Supporting Files */,
+				40E3E26B1C4BF32C00A70BA0 /* Views */,
+				40E3E2661C4BF2CD00A70BA0 /* Model */,
+				40E3E2611C4BF25400A70BA0 /* Controllers */,
 				40E3E22E1C4BF17D00A70BA0 /* carfixapp */,
 				40E3E2471C4BF17E00A70BA0 /* carfixappTests */,
+				40E3E23A1C4BF17D00A70BA0 /* Images.xcassets */,
 				40E3E2521C4BF17E00A70BA0 /* carfixappUITests */,
 				40E3E22D1C4BF17D00A70BA0 /* Products */,
+				1A0505FD4811D03FA71B14BE /* Pods */,
+				F02D85A75C552DAEE753DE42 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,13 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				40E3E22F1C4BF17D00A70BA0 /* AppDelegate.swift */,
-				40E3E2311C4BF17D00A70BA0 /* RootViewController.swift */,
-				40E3E2331C4BF17D00A70BA0 /* DataViewController.swift */,
-				40E3E2351C4BF17D00A70BA0 /* ModelController.swift */,
-				40E3E2371C4BF17D00A70BA0 /* Main.storyboard */,
-				40E3E23A1C4BF17D00A70BA0 /* Assets.xcassets */,
-				40E3E23C1C4BF17D00A70BA0 /* LaunchScreen.storyboard */,
-				40E3E23F1C4BF17D00A70BA0 /* Info.plist */,
 			);
 			path = carfixapp;
 			sourceTree = "<group>";
@@ -131,6 +147,49 @@
 			path = carfixappUITests;
 			sourceTree = "<group>";
 		};
+		40E3E2611C4BF25400A70BA0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				40E3E2621C4BF27300A70BA0 /* MapViewController.swift */,
+				40E3E2641C4BF2B200A70BA0 /* TypesTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		40E3E2661C4BF2CD00A70BA0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				40E3E2671C4BF2E100A70BA0 /* GoogleDataProvider.swift */,
+				40E3E2691C4BF30900A70BA0 /* GooglePlace.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		40E3E26B1C4BF32C00A70BA0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				40E3E2371C4BF17D00A70BA0 /* Main.storyboard */,
+				40E3E23C1C4BF17D00A70BA0 /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		40E3E26C1C4BF3CA00A70BA0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				40E3E23F1C4BF17D00A70BA0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F02D85A75C552DAEE753DE42 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				272B523883623C1FBC37DA50 /* Pods_carfixapp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +197,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 40E3E2581C4BF17E00A70BA0 /* Build configuration list for PBXNativeTarget "carfixapp" */;
 			buildPhases = (
+				E9629DBF17C94720A57E7575 /* Check Pods Manifest.lock */,
 				40E3E2281C4BF17D00A70BA0 /* Sources */,
 				40E3E2291C4BF17D00A70BA0 /* Frameworks */,
 				40E3E22A1C4BF17D00A70BA0 /* Resources */,
+				288AD19512D7A9C149661BC1 /* Embed Pods Frameworks */,
+				FDC2D090A6E8A20B4020195F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,7 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40E3E23E1C4BF17D00A70BA0 /* LaunchScreen.storyboard in Resources */,
-				40E3E23B1C4BF17D00A70BA0 /* Assets.xcassets in Resources */,
+				40E3E23B1C4BF17D00A70BA0 /* Images.xcassets in Resources */,
 				40E3E2391C4BF17D00A70BA0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,15 +319,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		288AD19512D7A9C149661BC1 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-carfixapp/Pods-carfixapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9629DBF17C94720A57E7575 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FDC2D090A6E8A20B4020195F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-carfixapp/Pods-carfixapp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		40E3E2281C4BF17D00A70BA0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40E3E2321C4BF17D00A70BA0 /* RootViewController.swift in Sources */,
-				40E3E2361C4BF17D00A70BA0 /* ModelController.swift in Sources */,
-				40E3E2341C4BF17D00A70BA0 /* DataViewController.swift in Sources */,
 				40E3E2301C4BF17D00A70BA0 /* AppDelegate.swift in Sources */,
+				40E3E2681C4BF2E100A70BA0 /* GoogleDataProvider.swift in Sources */,
+				40E3E26A1C4BF30900A70BA0 /* GooglePlace.swift in Sources */,
+				40E3E2631C4BF27300A70BA0 /* MapViewController.swift in Sources */,
+				40E3E2651C4BF2B200A70BA0 /* TypesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +418,7 @@
 				40E3E2381C4BF17D00A70BA0 /* Base */,
 			);
 			name = Main.storyboard;
+			path = carfixapp;
 			sourceTree = "<group>";
 		};
 		40E3E23C1C4BF17D00A70BA0 /* LaunchScreen.storyboard */ = {
@@ -315,6 +427,7 @@
 				40E3E23D1C4BF17D00A70BA0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = carfixapp;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -405,6 +518,7 @@
 		};
 		40E3E2591C4BF17E00A70BA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCEF2A4FF4E4262D178B0B08 /* Pods-carfixapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = carfixapp/Info.plist;
@@ -416,6 +530,7 @@
 		};
 		40E3E25A1C4BF17E00A70BA0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7B30079F1B888A1A35416B8 /* Pods-carfixapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = carfixapp/Info.plist;
@@ -492,6 +607,7 @@
 				40E3E25A1C4BF17E00A70BA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		40E3E25B1C4BF17E00A70BA0 /* Build configuration list for PBXNativeTarget "carfixappTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +616,7 @@
 				40E3E25D1C4BF17E00A70BA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		40E3E25E1C4BF17E00A70BA0 /* Build configuration list for PBXNativeTarget "carfixappUITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +625,7 @@
 				40E3E2601C4BF17E00A70BA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
