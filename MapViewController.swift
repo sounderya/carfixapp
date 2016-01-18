@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 import GoogleMaps
+import Parse
+import Bolts
 
 
 class MapViewController: UIViewController {
@@ -25,6 +27,18 @@ class MapViewController: UIViewController {
         
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
+        
+        
+        let userDetails = PFObject(className: "userDetails")
+        userDetails["number"] = "9789344663"
+        userDetails["UDID"] = "a56f45ds5d4fs5d4f5sdf5sd4f5"
+        userDetails["Type"] = "Customer"
+
+        userDetails.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+            print("Object has been saved.")
+        }
+        
+        
         
     }
     
