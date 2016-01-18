@@ -22,8 +22,9 @@
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S15-X1-mh5" customClass="GMSMapView">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZh-XJ-XSp">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZh-XJ-XSp">
                                         <rect key="frame" x="0.0" y="515" width="600" height="21"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.84627105496453903" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -31,8 +32,11 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="vZh-XJ-XSp" secondAttribute="bottom" id="P0x-4q-XsY"/>
                                     <constraint firstAttribute="width" constant="600" id="Qcp-wv-HY0"/>
                                     <constraint firstAttribute="height" constant="600" id="gYD-Sb-ILS"/>
+                                    <constraint firstItem="vZh-XJ-XSp" firstAttribute="leading" secondItem="S15-X1-mh5" secondAttribute="leading" id="nBZ-S2-TsX"/>
+                                    <constraint firstAttribute="trailing" secondItem="vZh-XJ-XSp" secondAttribute="trailing" id="qsD-PA-cWq"/>
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_me" translatesAutoresizingMaskIntoConstraints="NO" id="vCZ-6B-7ch">
@@ -56,6 +60,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addressLabel" destination="vZh-XJ-XSp" id="V5Y-wo-CPZ"/>
                         <outlet property="mapCenterPinImage" destination="vCZ-6B-7ch" id="Dbc-JK-Vuz"/>
                         <outlet property="mapView" destination="S15-X1-mh5" id="PMa-lN-vnp"/>
                         <outlet property="pinImageVerticalConstraint" destination="tnp-iu-AlJ" id="cCg-9E-cPG"/>
@@ -109,6 +114,59 @@
             </objects>
             <point key="canvasLocation" x="2495" y="797"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="cgI-qk-GqS">
+            <objects>
+                <viewController id="hgz-aN-r3E" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zRO-wn-2DK"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nvp-zq-897"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kWw-cP-Fyo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WELCOME TO CARFIX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DM5-xN-Jww">
+                                <rect key="frame" x="178" y="28" width="244" height="64"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You're now plugged into Asia's most intuitive &amp; friendly road assistance." textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lv1-Ur-23s">
+                                <rect key="frame" x="27" y="100" width="547" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Phone Number" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="18" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="waZ-nr-Mvv">
+                                <rect key="frame" x="141" y="183" width="319" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter your phone number to create a secured account" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhh-Hk-SYf">
+                                <rect key="frame" x="94" y="260" width="413" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Lc-M7-Rg4">
+                                <rect key="frame" x="265" y="421" width="70" height="52"/>
+                                <state key="normal" title="Next"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="HI1-gX-ELf" kind="presentation" identifier="After Phone" id="Y9W-rV-cZk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zaK-ZQ-k9m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-509" y="803"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="21v-z7-Kci">
             <objects>
@@ -125,7 +183,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zQ6-Jd-TAZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="289" y="797"/>
+            <point key="canvasLocation" x="245" y="797"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bOF-ZH-7GO">

@@ -13,10 +13,11 @@ import GoogleMaps
 
 class MapViewController: UIViewController {
     
+    @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var mapCenterPinImage: UIImageView!
     @IBOutlet weak var pinImageVerticalConstraint: NSLayoutConstraint!
-    var searchedTypes = ["bakery", "bar", "cafe", "grocery_or_supermarket", "restaurant"]
+    var searchedTypes = ["Auto Repair", "Car Repair"]
     let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
@@ -26,6 +27,7 @@ class MapViewController: UIViewController {
         locationManager.requestWhenInUseAuthorization()
         
     }
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "Types Segue" {

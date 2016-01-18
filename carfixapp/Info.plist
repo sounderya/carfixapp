@@ -23,7 +23,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>By accessing your location, this app can find you the nearest available workshop.</string>
+	<string>CarFix needs your location to provide navigation, traffic alerts and services like departure time, notifications and crowdsourced parking spots.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
