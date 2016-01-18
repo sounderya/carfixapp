@@ -84,8 +84,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-carfixapp/Bolts.framework"
+  install_framework "Pods-carfixapp/Parse.framework"
   install_framework "Pods-carfixapp/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-carfixapp/Bolts.framework"
+  install_framework "Pods-carfixapp/Parse.framework"
   install_framework "Pods-carfixapp/SwiftyJSON.framework"
 fi

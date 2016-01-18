@@ -5,5 +5,6 @@ use_frameworks!
 target ‘carfixapp’ do
 pod 'SwiftyJSON', '~> 2.3.0'
 pod ‘GoogleMaps’
+pod 'Parse'
 end
 

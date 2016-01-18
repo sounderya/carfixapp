@@ -8,3 +8,4 @@
 
 #import <Foundation/Foundation.h>
 #import <GoogleMaps/GoogleMaps.h>
+#import <Parse/Parse.h>
