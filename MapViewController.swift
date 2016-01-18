@@ -27,17 +27,33 @@ class MapViewController: UIViewController {
         
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
+     
         
         
-        let userDetails = PFObject(className: "userDetails")
-        userDetails["number"] = "9789344663"
-        userDetails["UDID"] = "a56f45ds5d4fs5d4f5sdf5sd4f5"
-        userDetails["Type"] = "Customer"
+                let userDetails = PFObject(className: "userDetails")
+                userDetails["number"] = "9789344663"
+                //userDetails["UDID"] = "a56f45ds5d4fs5d4f5sdf5sd4f5"
+                userDetails["Type"] = "Customer"
+        
+                userDetails.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                    print("Object has been saved.")
+                }
+        
 
-        userDetails.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            print("Object has been saved.")
-        }
         
+    
+//        let query = PFQuery(className: "userDetails")
+// 
+//        query.whereKey("number", equalTo: "9789344663")
+// 
+//        query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+//            if error == nil {
+//                print("Exists")
+//            } else {
+//                print("Error")
+//            }
+//        }
+
         
         
     }
