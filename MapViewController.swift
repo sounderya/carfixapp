@@ -15,6 +15,7 @@ import Bolts
 
 class MapViewController: UIViewController {
     
+    
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var mapCenterPinImage: UIImageView!
@@ -27,17 +28,23 @@ class MapViewController: UIViewController {
         
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
+        
+        locationManager.delegate = self
+        //locationManager.locationServicesEnabled
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        
+        locationManager.requestAlwaysAuthorization()
      
         
         
-                let userDetails = PFObject(className: "userDetails")
-                userDetails["number"] = "9789344663"
-                //userDetails["UDID"] = "a56f45ds5d4fs5d4f5sdf5sd4f5"
-                userDetails["Type"] = "Customer"
-        
-                userDetails.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-                    print("Object has been saved.")
-                }
+//                let userDetails = PFObject(className: "userDetails")
+//                userDetails["number"] = phone.text
+//                //userDetails["UDID"] = "a56f45ds5d4fs5d4f5sdf5sd4f5"
+//                userDetails["Type"] = "Customer"
+//        
+//                userDetails.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+//                    print("Object has been saved.")
+               // }
         
 
         
@@ -56,7 +63,7 @@ class MapViewController: UIViewController {
 
         
         
-    }
+   }
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -98,12 +105,74 @@ extension MapViewController: CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
             
+            
             // 7
             mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
             
             // 8
             locationManager.stopUpdatingLocation()
+            
+            //
+            
+                let locationArray = locations as NSArray
+                let locationObj = locationArray.lastObject as! CLLocation
+                let coord = locationObj.coordinate
+                
+                print(coord.latitude)
+                print(coord.longitude)
+            var addressLabel = "\(coord.latitude)"
+            addressLabel += "," + "\(coord.longitude)"
+            self.addressLabel.text = addressLabel
+           
         }
         
     }
+    func reverseGeocodeCoordinate(coordinate: CLLocationCoordinate2D) {
+        
+        // 1
+        let geocoder = GMSGeocoder()
+        
+        // 2
+        geocoder.reverseGeocodeCoordinate(coordinate) { response, error in
+            if let address = response?.firstResult() {
+                
+                // 3
+                let lines = address.lines as! [String]
+                self.addressLabel.text = lines.joinWithSeparator("\n")
+                
+                // 4
+                UIView.animateWithDuration(0.25) {
+                    self.view.layoutIfNeeded()
+                }
+            }
+        }
+    }
+    
+    
+   
+    
+    @IBAction func locateMe(object: AnyObject) {
+//        let camera = GMSCameraPosition.cameraWithLatitude(41.887,
+//            longitude:-87.622, zoom:15)
+//        let mapView = GMSMapView.mapWithFrame(CGRectZero, camera:camera)
+//        
+//        
+//        let marker = GMSMarker()
+//        marker.position = CLLocationCoordinate2DMake(41.887, -87.622)
+//        marker.appearAnimation = kGMSMarkerAnimationPop
+//        marker.icon = UIImage(named: "icon_me")
+//        marker.map = mapView
+//        
+//        self.view = mapView
+        
+//        let latitude = mapView.myLocation.coordinate.latitude
+//     
+//        let longitude = self.mapView.myLocation.coordinate.longitude
+        
+//        print("---------------lat=\(latitude)")
+//        print("---------------lon= \(longitude)")
+        
+        
+     
+   }
 }

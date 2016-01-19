@@ -32,6 +32,8 @@
 		40F5F10A1C4D57FB003D257C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F5F1091C4D57FB003D257C /* SystemConfiguration.framework */; };
 		40F5F10C1C4D5805003D257C /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F5F10B1C4D5805003D257C /* libz.tbd */; };
 		40F5F10E1C4D5814003D257C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F5F10D1C4D5814003D257C /* libsqlite3.tbd */; };
+		40F5F1101C4D8A78003D257C /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F5F10F1C4D8A78003D257C /* SignUpController.swift */; };
+		40F5F1121C4D9DB6003D257C /* SendRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F5F1111C4D9DB6003D257C /* SendRequestController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		40F5F1091C4D57FB003D257C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		40F5F10B1C4D5805003D257C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		40F5F10D1C4D5814003D257C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		40F5F10F1C4D8A78003D257C /* SignUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		40F5F1111C4D9DB6003D257C /* SendRequestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendRequestController.swift; sourceTree = "<group>"; };
 		BCEF2A4FF4E4262D178B0B08 /* Pods-carfixapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carfixapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-carfixapp/Pods-carfixapp.debug.xcconfig"; sourceTree = "<group>"; };
 		F7B30079F1B888A1A35416B8 /* Pods-carfixapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carfixapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-carfixapp/Pods-carfixapp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,13 +97,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40F5F1041C4D57D0003D257C /* CoreLocation.framework in Frameworks */,
 				40F5F10E1C4D5814003D257C /* libsqlite3.tbd in Frameworks */,
 				40F5F10C1C4D5805003D257C /* libz.tbd in Frameworks */,
 				40F5F10A1C4D57FB003D257C /* SystemConfiguration.framework in Frameworks */,
 				40F5F1081C4D57EF003D257C /* StoreKit.framework in Frameworks */,
 				40F5F0FA1C4D5521003D257C /* Security.framework in Frameworks */,
 				40F5F1061C4D57DA003D257C /* QuartzCore.framework in Frameworks */,
-				40F5F1041C4D57D0003D257C /* CoreLocation.framework in Frameworks */,
 				40F5F1021C4D57C4003D257C /* CoreGraphics.framework in Frameworks */,
 				40F5F1001C4D57B6003D257C /* CFNetwork.framework in Frameworks */,
 				40F5F0FE1C4D57AC003D257C /* AudioToolbox.framework in Frameworks */,
@@ -195,6 +199,8 @@
 			children = (
 				40E3E2621C4BF27300A70BA0 /* MapViewController.swift */,
 				40E3E2641C4BF2B200A70BA0 /* TypesTableViewController.swift */,
+				40F5F10F1C4D8A78003D257C /* SignUpController.swift */,
+				40F5F1111C4D9DB6003D257C /* SendRequestController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -432,8 +438,10 @@
 			files = (
 				40418F021C4C035F00230CA7 /* header.m in Sources */,
 				40E3E2301C4BF17D00A70BA0 /* AppDelegate.swift in Sources */,
+				40F5F1101C4D8A78003D257C /* SignUpController.swift in Sources */,
 				40E3E2681C4BF2E100A70BA0 /* GoogleDataProvider.swift in Sources */,
 				40E3E26A1C4BF30900A70BA0 /* GooglePlace.swift in Sources */,
+				40F5F1121C4D9DB6003D257C /* SendRequestController.swift in Sources */,
 				40E3E2631C4BF27300A70BA0 /* MapViewController.swift in Sources */,
 				40E3E2651C4BF2B200A70BA0 /* TypesTableViewController.swift in Sources */,
 			);
